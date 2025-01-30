@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# **AI-Powered Chat Application with LangChain Integration**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-stack AI-powered chat application built using **ReactJS** for the frontend and **Flask** for the backend, leveraging **LangChain** for conversation memory management. The application supports dynamic model selection between **OpenAI's GPT-4** and **Anthropic's Claude 3.5 Sonnet**, with the ability to handle PDF file uploads and maintain conversation context.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Features**
+- 💬 **AI Conversations:** Engage in intelligent conversations powered by **GPT-4** or **Claude 3.5 Sonnet**.
+- 🔄 **Conversation Memory:** Preserve context across multiple interactions using LangChain’s memory.
+- 📂 **File Upload:** Upload PDF files to enrich the conversation context with file content.
+- 🛠️ **Dynamic Model Selection:** Switch between GPT-4 and Claude before starting a conversation.
+- 🔒 **Model Locking:** Lock model selection once a conversation begins, ensuring consistency.
+- 💾 **Saved Conversations:** Easily load past conversations and continue from where you left off.
+- 🌐 **Responsive UI:** Clean, minimal, and intuitive user interface.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Backend Setup**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Prerequisites**
+The backend requires the following dependencies:
 
-### `npm test`
+```plaintext
+flask==3.0.0
+flask-cors==4.0.0
+werkzeug==3.0.1
+langchain==0.1.0
+langchain-anthropic==0.0.4
+openai==1.3.0
+python-dotenv==1.0.0
+PyPDF2==3.0.1
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Clone the repository**
+git clone https://github.com/MANOJSAHIT/StealthAviationAtHome.git
+cd StealthAviationAtHome/backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Set up a virtual environment:**
+python -m venv venv
+source venv/bin/activate  # For Windows, use `venv\\Scripts\\activate`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Install dependencies:**
+pip install -r requirements.txt
 
-### `npm run eject`
+**Environment setup:**
+The .env file is already included and configured with the necessary API keys:
+OPENAI_API_KEY=your_openai_api_key
+CLAUDE_API_KEY=your_claude_api_key
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Run the backend server:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+python app.py
+Frontend Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Navigate to the frontend directory:**
+cd ../frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Install dependencies:**
+npm install  # or `yarn install`
 
-## Learn More
+**Run the frontend:**
+npm start  # or `yarn start`
+The application will be available at http://localhost:3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Project Structure**
+StealthAviationAtHome
+├── backend
+│   ├── .env                  # API keys configuration
+│   ├── app.py                # Flask backend server
+│   └── requirements.txt      # Backend dependencies
+├── frontend
+│   ├── node_modules          # Frontend dependencies
+│   ├── public                # Static assets
+│   ├── src                   # React source files
+│   │   ├── App.js            # Main React component
+│   │   ├── App.css           # Global styles for the application
+│   │   ├── components        # Reusable components
+│   │   │   ├── Clear.js
+│   │   │   ├── Clear.module.css
+│   │   │   ├── History.js
+│   │   │   ├── History.module.css
+│   │   │   ├── Message.js
+│   │   │   ├── Message.module.css
+│   │   │   ├── Input.js
+│   │   │   └── Input.module.css
+└── README.md                 # Project documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Usage Instructions**
 
-### Code Splitting
+Select the desired model (either GPT-4 or Claude 3.5 Sonnet) from the dropdown menu.
+Enter a system prompt to guide the AI on how to respond throughout the conversation.
+Optionally, upload PDF files to incorporate their content into the conversation.
+Engage in a conversation and save your progress for future sessions.
+Start a new conversation using the “Save and Start New Conversation” button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Technologies Used**
+ReactJS: Frontend user interface
+Flask: Backend API
+LangChain: Conversation memory and model management
+OpenAI: GPT-4 model integration
+Anthropic: Claude 3.5 Sonnet integration
+PyPDF2: Extracting text from uploaded PDF files
