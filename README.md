@@ -95,6 +95,9 @@ StealthAviationAtHome
 4) Engage in a conversation and save your progress for future sessions.
 5) Start a new conversation using the “Save and Start New Conversation” button.
 
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 **Technologies Used**
 ReactJS: Frontend user interface
 Flask: Backend API
