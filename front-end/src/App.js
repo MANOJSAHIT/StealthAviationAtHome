@@ -13,7 +13,7 @@ export default function App() {
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [savedConversations, setSavedConversations] = useState(() => {
     const saved = localStorage.getItem("savedConversations");
-    return saved ? JSON.parse(savedConversations) : [];
+    return saved ? JSON.parse(saved) : [];
   });
   const [conversationId, setConversationId] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -21,8 +21,8 @@ export default function App() {
   const [fileUploaded, setFileUploaded] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [isSystemPrompt, setIsSystemPrompt] = useState(true);
-  const [selectedModel, setSelectedModel] = useState("GPT-4");  
-  const [modelLocked, setModelLocked] = useState(false);  
+  const [selectedModel, setSelectedModel] = useState("GPT-4");  // Default model
+  const [modelLocked, setModelLocked] = useState(false);  // Lock model selection once conversation starts
 
   useEffect(() => {
     const initializeConversation = async () => {
@@ -61,7 +61,7 @@ export default function App() {
 
     if (isSystemPrompt) {
       setIsSystemPrompt(false);
-      setModelLocked(true);  
+      setModelLocked(true);  // Lock model selection once the first message is sent
       return;
     }
 
@@ -72,7 +72,7 @@ export default function App() {
       uploadedFiles.forEach((file) => formData.append("files", file));
       formData.append("conversation_id", conversationId);
       formData.append("user_input", input);
-      formData.append("model", selectedModel);  
+      formData.append("model", selectedModel);  // Include model selection in the request
 
       const response = await fetch("http://localhost:5000/api/chat_with_files", {
         method: "POST",
@@ -134,7 +134,7 @@ export default function App() {
     setMessages([]);
     setUploadedFiles([]);
     setIsSystemPrompt(true);
-    setModelLocked(false);  
+    setModelLocked(false);  // Unlock model selection for the new conversation
     const response = await fetch("http://localhost:5000/api/start_conversation", {
       method: "POST",
     });
@@ -154,11 +154,15 @@ export default function App() {
     <div className="App">
       <div className="Sidebar">
         <h3>Saved Conversations</h3>
-        {savedConversations.map((conversation, index) => (
-          <div key={conversation.id} className="ConversationItem" onClick={() => loadConversation(conversation, index)}>
-            {conversation.title}
-          </div>
-        ))}
+        {savedConversations.length === 0 ? (
+          <p>No saved conversations yet.</p>
+        ) : (
+          savedConversations.map((conversation, index) => (
+            <div key={conversation.id} className="ConversationItem" onClick={() => loadConversation(conversation, index)}>
+              {conversation.title}
+            </div>
+          ))
+        )}
       </div>
 
       <div className="Main">
