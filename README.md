@@ -14,7 +14,7 @@ This project is a full-stack AI-powered chat application built using **ReactJS**
 - 🌐 **Responsive UI:** Clean, minimal, and intuitive user interface.
 
 ---
-<img src="https://imgur.com/a/ENBlLZj" width="40" height="40" />
+[Imgur](https://imgur.com/KDRSt6f)
 
 ## **Backend Setup**
 
