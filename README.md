@@ -88,11 +88,12 @@ StealthAviationAtHome
 
 **Usage Instructions**
 
-Select the desired model (either GPT-4 or Claude 3.5 Sonnet) from the dropdown menu.
-Enter a system prompt to guide the AI on how to respond throughout the conversation.
-Optionally, upload PDF files to incorporate their content into the conversation.
-Engage in a conversation and save your progress for future sessions.
-Start a new conversation using the “Save and Start New Conversation” button.
+1) Select the desired model (either GPT-4 or Claude 3.5 Sonnet) from the dropdown menu.
+2) Enter a system prompt to guide the AI on how to respond throughout the conversation.
+💡 Note: The first prompt in every conversation is considered a system prompt that sets the tone or context for the conversation, and it will not receive a direct response.
+3) Optionally, upload PDF files to incorporate their content into the conversation.
+4) Engage in a conversation and save your progress for future sessions.
+5) Start a new conversation using the “Save and Start New Conversation” button.
 
 **Technologies Used**
 ReactJS: Frontend user interface
