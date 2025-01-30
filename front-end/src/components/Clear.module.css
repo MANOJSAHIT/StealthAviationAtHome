@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100%;
+  height: 60px;
+  background-color: #f48c06;  /* Orange button */
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.wrapper:hover {
+  cursor: pointer;
+  background-color: #d97706; /* Darker orange on hover */
+}

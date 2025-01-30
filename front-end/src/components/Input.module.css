@@ -1,0 +1,42 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.inputField {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.inputField:focus {
+  outline: none;
+}
+
+.pinIcon {
+  cursor: pointer;
+  color: #4caf50;
+}
+
+.pinIcon:hover {
+  color: #388e3c;
+}
+
+.sendButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #388e3c;
+}
