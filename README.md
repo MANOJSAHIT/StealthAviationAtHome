@@ -14,7 +14,8 @@ This project is a full-stack AI-powered chat application built using **ReactJS**
 - 🌐 **Responsive UI:** Clean, minimal, and intuitive user interface.
 
 ---
-[Imgur](https://imgur.com/KDRSt6f)
+![StealthAviationAtHome](./chat_app_demo.gif)
+
 
 ## **Backend Setup**
 
