@@ -14,6 +14,7 @@ This project is a full-stack AI-powered chat application built using **ReactJS**
 - 🌐 **Responsive UI:** Clean, minimal, and intuitive user interface.
 
 ---
+<img src="https://imgur.com/a/ENBlLZj" width="40" height="40" />
 
 ## **Backend Setup**
 
@@ -95,7 +96,7 @@ StealthAviationAtHome
 4) Engage in a conversation and save your progress for future sessions.
 5) Start a new conversation using the “Save and Start New Conversation” button.
 
-![](chat_app_demo.gif)
+
 
 **Technologies Used**
 ReactJS: Frontend user interface
