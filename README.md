@@ -46,7 +46,7 @@ source venv/bin/activate  # For Windows, use `venv\\Scripts\\activate`
 pip install -r requirements.txt
 
 **Environment setup:**
-The .env file is already included and configured with the necessary API keys:
+The .env file is already included and configured with the necessary API keys in the /backend folder (change the keys accirdingly):
 OPENAI_API_KEY=your_openai_api_key
 CLAUDE_API_KEY=your_claude_api_key
 
